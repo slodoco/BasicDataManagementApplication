@@ -1,6 +1,6 @@
 # Basic Data Management Application
 ## Goal: 
-Create an application which will act as a DBMS for a particular application with basic operation such as create, update, delete, and select operations. Provide a CLI to the user with the following options:
+Create an application which will act as a DBMS for a particular application with basic operation such as create, update, delete, and select operations. Provide an interface for the user with the following options:
 1. Create Contact
 2. Edit Contact
 3. Search Contact
