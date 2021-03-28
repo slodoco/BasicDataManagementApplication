@@ -25,7 +25,6 @@ class driver(tk.Frame):
                 'gender': row['gender'],
             })
         for x in Contacts:
-            #print(x)
             if x['ID'] > contact_id_ct:
                 contact_id_ct = x['ID']
 
@@ -44,7 +43,6 @@ class driver(tk.Frame):
                 'country': row['country'],
             })
         for x in Addresses:
-            #print(x)
             if x['aID'] > address_id_ct:
                 address_id_ct = x['aID']
 
@@ -59,7 +57,6 @@ class driver(tk.Frame):
                 'number': row['number'],
             })
         for x in Phones:
-            #print(x)
             if x['pID'] > phone_id_ct:
                 phone_id_ct = x['pID']
 
@@ -270,7 +267,6 @@ class driver(tk.Frame):
                     if dictionary[key] == value:
                         search_keys.append(self.Contacts[idx])
                         idx += 1
-                    #print(dictionary.get(key))
                     else:
                         idx += 1
         for y in afieldnames:
@@ -281,7 +277,6 @@ class driver(tk.Frame):
                     if dictionary[key] == value:
                         search_keys.append(self.Addresses[idx])
                         idx += 1
-                    #print(dictionary.get(key))
                     else:
                         idx += 1
         for z in pfieldnames:
@@ -292,7 +287,6 @@ class driver(tk.Frame):
                     if dictionary[key] == value:
                         search_keys.append(self.Phones[idx])
                         idx += 1
-                    #print(dictionary.get(key))
                     else:
                         idx += 1
 
@@ -303,7 +297,6 @@ class driver(tk.Frame):
         )
         listbox_results.grid(row = 8, column = 2)
     def delete_contact(self, selected_contact):
-        print(selected_contact)
         to_delete = ast.literal_eval(selected_contact)
         for dictionary in self.Contacts:
             if dictionary['ID'] == to_delete['ID']:
@@ -333,6 +326,7 @@ class driver(tk.Frame):
             writer.writeheader()
             writer.writerows(self.Phones)
         self.reload_UI()
+
 #print(list(pycountry.countries))
 #print(list(pycountry.subdivisions))
 root = tk.Tk()
